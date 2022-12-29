@@ -1,0 +1,176 @@
+@import "../../scss/functions";
+@import "../../scss/layout";
+@import "../../scss/variables";
+
+//header
+.header {
+	margin-bottom: 160px;
+
+	//nav
+	.nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		padding: 24px 0;
+		background-color: #151515;
+		box-shadow: 0 0 10px 0 #000;
+		z-index: 999;
+
+		//nav container
+		.container {
+			@include flex(space-between, center);
+		}
+
+		//nav name
+		&__name {
+			font-size: rem(24);
+			font-weight: 700;
+			line-height: rem(32);
+			letter-spacing: -0.33px;
+			color: $white;
+		}
+
+		//nav list
+		&__list {
+			width: 60%;
+			height: 100vh;
+			position: fixed;
+			top: 80px;
+			right: 0;
+			@include flex(center, center);
+			gap: 40px;
+			flex-direction: column;
+			background-color: #222;
+			text-align: center;
+			transform: translateX(100%);
+			transition: 0.3s ease;
+			visibility: hidden;
+
+			//nav list item
+			&-item {
+				font-size: rem(24);
+				text-transform: uppercase;
+				cursor: pointer;
+
+				a {
+					color: $white;
+				}
+			}
+
+			//nav active
+			&.active {
+				transform: translateX(0);
+				transition-duration: 0.3s;
+				visibility: visible;
+			}
+		}
+
+		//nav hamburger
+		&__hamburger {
+			position: relative;
+			z-index: 999;
+			height: 25px;
+			cursor: pointer;
+
+			svg {
+				width: 25px;
+				height: 25px;
+			}
+		}
+	}
+
+	//header nav container
+	&__nav {
+		padding-top: 20px;
+		@include flex(space-between, center);
+
+		//nav
+		.nav {
+			@include flex(center, center);
+			position: fixed;
+			height: 100vh;
+			width: 100%;
+			left: 0;
+			top: 0;
+			transform: translateX(100%);
+			transition: 0.3s cubic-bezier(0.33, 0.85, 0.4, 0.96);
+			visibility: hidden;
+			z-index: 100;
+			text-align: center;
+			background-color: #000;
+		}
+	}
+}
+
+@include md {
+	//header
+	.header {
+		margin-bottom: 60px;
+
+		//nav
+		.nav {
+			@include flex(flex-end, center);
+			position: static;
+			height: 100%;
+			transform: translateX(0);
+			transition: none;
+			visibility: visible;
+			text-align: left;
+			background-color: transparent;
+			box-shadow: none;
+
+			//nav container
+			.container {
+				width: 100%;
+			}
+
+			//nav name
+			&__name {
+				font-size: rem(32);
+				letter-spacing: -0.44px;
+			}
+
+			//nav list
+			&__list {
+				position: static;
+				width: auto;
+				height: auto;
+				background: none;
+				flex-direction: row;
+				visibility: visible;
+				transform: none;
+
+				//nav list item
+				&-item {
+					font-size: rem(16);
+					text-transform: none;
+
+					&::after {
+						content: "";
+						display: block;
+						width: 0;
+						height: 2px;
+						background-color: $green;
+						transition: width 0.3s;
+					}
+
+					&:hover::after {
+						width: 100%;
+					}
+				}
+			}
+
+			//nav hamburger
+			&__hamburger {
+				display: none;
+			}
+		}
+
+		//header nav container
+		&__nav {
+			padding-top: 30px;
+			margin-bottom: 150px;
+		}
+	}
+}

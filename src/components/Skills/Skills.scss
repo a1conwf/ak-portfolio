@@ -1,0 +1,80 @@
+@import "../../scss/functions";
+@import "../../scss/layout";
+@import "../../scss/variables";
+
+//skills
+.skills {
+	margin-bottom: 80px;
+	text-align: center;
+	overflow: hidden;
+
+	//skills list
+	&__list {
+		display: grid;
+		position: relative;
+		grid-gap: 24px;
+		padding: 40px 0;
+		border-top: 1px solid $white;
+		border-bottom: 1px solid $white;
+
+		//skills list item
+		&-item {
+			display: flex;
+			flex-direction: column;
+
+			//title
+			&-title {
+				font-size: rem(32);
+				line-height: rem(40);
+				font-weight: 700;
+				letter-spacing: -1px;
+			}
+
+			//experience
+			&-experience {
+				color: $grey;
+			}
+		}
+	}
+}
+
+@include md {
+	//skills
+	.skills {
+		margin-bottom: 100px;
+		text-align: left;
+
+		//skills list
+		&__list {
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 52px 7px;
+			padding: 52px 0 0;
+			border-top: 1px solid $white;
+			border-bottom: none;
+
+			//skills list item
+			&-item {
+				//title
+				&-title {
+					font-size: rem(48);
+					line-height: rem(56);
+					letter-spacing: -1.5px;
+				}
+			}
+		}
+	}
+}
+
+@include lg {
+	//skills
+	.skills {
+		margin-bottom: 140px;
+
+		//skills list
+		&__list {
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 60px 30px;
+			padding: 72px 0 0;
+		}
+	}
+}

@@ -1,0 +1,71 @@
+@import "./typography";
+@import "./mixins";
+
+//Resets
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+button {
+	border: none;
+	outline: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+//btn
+.btn {
+	padding-bottom: 10px;
+	font-family: $SpaceGrotesk;
+	font-weight: 700;
+	font-size: rem(16);
+	line-height: rem(26);
+	letter-spacing: 2.3px;
+	text-transform: uppercase;
+	cursor: pointer;
+	color: $white;
+	border-bottom: 2px solid $green;
+	transition: color 0.3s ease;
+
+	//load more btn
+	&.load-more {
+		display: flex;
+		margin: 0 auto;
+	}
+
+	&:hover {
+		color: $green;
+	}
+}
+
+body {
+	font-size: rem(16);
+	font-family: $SpaceGrotesk;
+	font-weight: 500;
+	line-height: rem(26);
+	color: $white;
+	background-color: $black;
+}
+
+@include md {
+	//body
+	body {
+		font-size: rem(18);
+		line-height: rem(28);
+	}
+}

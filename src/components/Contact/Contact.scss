@@ -1,0 +1,151 @@
+@import "../../scss/functions";
+@import "../../scss/variables";
+@import "../../scss/layout";
+
+//contact
+.contact {
+	position: relative;
+	overflow: hidden;
+	padding: 60px 0 90px;
+	text-align: center;
+	background-color: $darkGrey;
+	z-index: 1;
+
+	//contact info
+	&__info {
+		//title
+		&-title {
+			margin-bottom: 20px;
+		}
+
+		//text
+		&-text {
+			max-width: 445px;
+			margin: 0 auto 50px auto;
+		}
+	}
+
+	//form
+	.form {
+		position: relative;
+		width: 100%;
+		max-width: 445px;
+		margin: 0 auto;
+		z-index: 999;
+
+		//form group
+		&__group {
+			position: relative;
+			margin-bottom: 40px;
+
+			//form group input, textarea
+			&-input,
+			&-textarea {
+				width: 100%;
+				font-family: $SpaceGrotesk;
+				font-size: rem(16);
+				line-height: rem(26);
+				letter-spacing: -0.22px;
+				color: $white;
+				background-color: transparent;
+				border: none;
+				outline: none;
+				border-bottom: 1px solid $white;
+
+				&::placeholder {
+					opacity: 0.5;
+				}
+
+				&:focus {
+					border-bottom: 1px solid $green;
+				}
+			}
+
+			//form group input
+			&-input {
+				padding: 0 0 16px 24px;
+			}
+
+			//textarea
+			&-textarea {
+				padding: 0 0 81px 24px;
+				resize: none;
+			}
+
+			//icon error
+			&-icon {
+				position: absolute;
+				top: 0;
+				right: 0;
+				display: none;
+			}
+
+			//form group error
+			&.error {
+				border-bottom: 1px solid $red;
+
+				input,
+				textarea {
+					border: none;
+				}
+
+				//error icon
+				.form__group-icon {
+					display: block;
+				}
+
+				//error text
+				.form__group-error {
+					position: absolute;
+					bottom: -20px;
+					right: 0;
+					font-size: rem(12);
+					line-height: rem(16);
+					letter-spacing: -0.17px;
+					color: $red;
+				}
+			}
+		}
+
+		//btn
+		.btn {
+			display: flex;
+			margin-left: auto;
+		}
+	}
+}
+
+@include lg {
+	//contact
+	.contact {
+		padding: 85px 0 90px;
+		text-align: left;
+
+		//contact inner
+		&__inner {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		//contact info
+		&__info {
+			max-width: 445px;
+
+			//title
+			&-title {
+				margin-bottom: 36px;
+			}
+
+			//text
+			&-text {
+				margin: 0;
+			}
+		}
+
+		//form
+		.form {
+			justify-self: flex-end;
+			margin: 0;
+		}
+	}
+}
