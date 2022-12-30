@@ -14,7 +14,6 @@ const Skills = () => {
 					{skillsData.map((skill) => (
 						<li key={skill.id} className="skills__list-item">
 							<span className="skills__list-item-title">{skill.title}</span>
-							<span className="skills__list-item-experience">{skill.experience}</span>
 						</li>
 					))}
 				</ul>

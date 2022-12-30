@@ -19,32 +19,38 @@ export const skillsData = [
 	{
 		id: nanoid(),
 		title: "HTML",
-		experience: "2 Years Experience",
 	},
 	{
 		id: nanoid(),
-		title: "CSS",
-		experience: "2 Years Experience",
-	},
-	{
-		id: nanoid(),
-		title: "Scss",
-		experience: "2 Years Experience",
+		title: "CSS/SCSS",
 	},
 	{
 		id: nanoid(),
 		title: "Bootstrap",
-		experience: "1 Year Experience",
 	},
 	{
 		id: nanoid(),
 		title: "Javascript",
-		experience: "2 Years Experience",
 	},
 	{
 		id: nanoid(),
 		title: "React",
-		experience: "1 Year Experience",
+	},
+	{
+		id: nanoid(),
+		title: "Wordpress",
+	},
+	{
+		id: nanoid(),
+		title: "Prestashop",
+	},
+	{
+		id: nanoid(),
+		title: "Git",
+	},
+	{
+		id: nanoid(),
+		title: "Figma",
 	},
 ];
 
