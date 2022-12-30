@@ -11,7 +11,7 @@ const Header = () => {
 	const [isExpanded, setIsExpanded] = useState(false);
 
 	return (
-		<header className="header" data-aos="fade-in">
+		<header className="header" data-aos="fade-in" data-aos-delay="400">
 			<nav className="nav">
 				<div className="container">
 					<a href="#about" className="nav__name">

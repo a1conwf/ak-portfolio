@@ -7,7 +7,7 @@ import "./Hero.scss";
 
 const Hero = () => {
 	return (
-		<section className="hero" id="about" data-aos="fade-in">
+		<section className="hero" id="about" data-aos="fade-down" data-aos-delay="800">
 			<h1 className="hero__title">
 				Nice to meet you! <br /> I'm <TypeAnimation sequence={["Anton Kashuba.", 1000, "front-end developer.", 1000]} speed={50} wrapper="span" repeat={Infinity} />
 			</h1>

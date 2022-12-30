@@ -8,7 +8,7 @@ import "./Skills.scss";
 
 const Skills = () => {
 	return (
-		<section className="skills" id="skills" data-aos="fade-in">
+		<section className="skills" id="skills" data-aos="fade-up" data-aos-delay="1200">
 			<div className="container">
 				<ul className="skills__list">
 					{skillsData.map((skill) => (

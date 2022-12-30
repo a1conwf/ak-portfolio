@@ -3,7 +3,7 @@ import React, {useState} from "react";
 //styles
 import "./Contact.scss";
 
-//imgs and icons
+//error icon
 import iconError from "../../assets/svg/icon-error.svg";
 
 const Contact = () => {
@@ -81,7 +81,7 @@ const Contact = () => {
 				<div className="contact__inner" data-aos="fade-in">
 					<div className="contact__info">
 						<h2 className="contact__info-title">Contact</h2>
-						<p className="contact__info-text">I would love to hear about your project and how I could help. Please fill in the form, and I’ll get back to you as soon as possible.</p>
+						<p className="contact__info-text">Got a question or proposal, or just want to say hello? Go ahead. I’ll try my best to get back to you!</p>
 					</div>
 
 					<form className="form" onSubmit={handleSubmit} autoComplete="off">
