@@ -1,6 +1,7 @@
 import {nanoid} from "nanoid";
 
 //project imgs
+import gpuShopImg from "../assets/img/gpu-shop.png";
 import tipCalculatorAppImg from "../assets/img/tip-calculator-app.webp";
 import fyloDarkThemeLandingPageImg from "../assets/img/fylo-dark-theme-landing-page.webp";
 import pricingComponentWithToggleImg from "../assets/img/pricing-component-with-toggle.webp";
@@ -55,6 +56,14 @@ export const skillsData = [
 ];
 
 export const projectsData = [
+	{
+		id: nanoid(),
+		img: gpuShopImg,
+		name: "GPU Online Shop",
+		techList: ["React", "React Router", "React Skeleton", "Axios", "Scss"],
+		liveLink: "https://gpu-shop.vercel.app/",
+		gitRepo: "https://github.com/a1conwf/gpu-shop",
+	},
 	{
 		id: nanoid(),
 		img: tipCalculatorAppImg,
