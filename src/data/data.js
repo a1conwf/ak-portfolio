@@ -69,7 +69,7 @@ export const projectsData = [
     id: nanoid(),
     img: passwordGeneratorAppImg,
     name: "Password Generator App",
-    techList: ["React", "Scss"],
+    techList: ["React", "css modules"],
     liveLink: "https://password-generator-app-a1conwf.vercel.app/",
     gitRepo: "https://github.com/a1conwf/password-generator-app",
   },
