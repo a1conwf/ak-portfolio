@@ -2,6 +2,7 @@ import { nanoid } from "nanoid";
 
 //project imgs
 import gpuShopImg from "../assets/img/gpu-shop.png";
+import passwordGeneratorAppImg from "../assets/img/password-generator-app.webp";
 import tipCalculatorAppImg from "../assets/img/tip-calculator-app.webp";
 import fyloDarkThemeLandingPageImg from "../assets/img/fylo-dark-theme-landing-page.webp";
 import pricingComponentWithToggleImg from "../assets/img/pricing-component-with-toggle.webp";
@@ -63,6 +64,14 @@ export const projectsData = [
     techList: ["React", "React Router", "React Skeleton", "Axios", "Scss"],
     liveLink: "https://gpu-shop.vercel.app/",
     gitRepo: "https://github.com/a1conwf/gpu-shop",
+  },
+  {
+    id: nanoid(),
+    img: passwordGeneratorAppImg,
+    name: "Password Generator App",
+    techList: ["React", "Scss"],
+    liveLink: "https://password-generator-app-a1conwf.vercel.app/",
+    gitRepo: "https://github.com/a1conwf/password-generator-app",
   },
   {
     id: nanoid(),
