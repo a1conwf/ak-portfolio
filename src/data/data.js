@@ -1,6 +1,7 @@
 import { nanoid } from "nanoid";
 
 //project imgs
+import pizzaPalaceImg from "../assets/img/pizza-palace.png";
 import gpuShopImg from "../assets/img/gpu-shop.png";
 import passwordGeneratorAppImg from "../assets/img/password-generator-app.webp";
 import todoAppImg from "../assets/img/todo-app.webp";
@@ -29,6 +30,10 @@ export const skillsData = [
   },
   {
     id: nanoid(),
+    title: "CSS Modules",
+  },
+  {
+    id: nanoid(),
     title: "Bootstrap",
   },
   {
@@ -37,7 +42,15 @@ export const skillsData = [
   },
   {
     id: nanoid(),
+    title: "TypeScript",
+  },
+  {
+    id: nanoid(),
     title: "React",
+  },
+  {
+    id: nanoid(),
+    title: "Redux Toolkit",
   },
   {
     id: nanoid(),
@@ -60,11 +73,19 @@ export const skillsData = [
 export const projectsData = [
   {
     id: nanoid(),
-    img: gpuShopImg,
-    name: "GPU Online Shop",
-    techList: ["React", "React Router", "React Skeleton", "Axios", "Scss"],
-    liveLink: "https://gpu-shop.vercel.app/",
-    gitRepo: "https://github.com/a1conwf/gpu-shop",
+    img: pizzaPalaceImg,
+    name: "Pizza Palace",
+    techList: [
+      "React",
+      "React router",
+      "React skeleton",
+      "Typescript",
+      "Redux Toolkit",
+      "Axios",
+      "css modules",
+    ],
+    liveLink: "https://pizza-palace-a1conwf.vercel.app/",
+    gitRepo: "https://github.com/a1conwf/pizza-palace",
   },
   {
     id: nanoid(),
@@ -81,6 +102,14 @@ export const projectsData = [
     techList: ["React", "css modules"],
     liveLink: "https://password-generator-app-a1conwf.vercel.app/",
     gitRepo: "https://github.com/a1conwf/password-generator-app",
+  },
+  {
+    id: nanoid(),
+    img: gpuShopImg,
+    name: "GPU Online Shop",
+    techList: ["React", "React Router", "React Skeleton", "Axios", "Scss"],
+    liveLink: "https://gpu-shop.vercel.app/",
+    gitRepo: "https://github.com/a1conwf/gpu-shop",
   },
   {
     id: nanoid(),
