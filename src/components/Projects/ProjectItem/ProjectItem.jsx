@@ -8,7 +8,7 @@ const ProjectItem = (props) => {
   const { img, name, techList, liveLink, gitRepo } = props;
 
   return (
-    <article className="project" data-aos="fade-up">
+    <article className="project">
       <div className="project__img">
         <div className="project__img-overlay"></div>
         <img src={img} alt="project-img" />
