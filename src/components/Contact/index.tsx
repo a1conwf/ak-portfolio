@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
+import { TypeFormErrors, TypeFormValues } from "../../types";
 
 //styles
 import "./Contact.scss";
@@ -6,23 +8,25 @@ import "./Contact.scss";
 //error icon
 import iconError from "../../assets/svg/icon-error.svg";
 
-const Contact = () => {
+const Contact: React.FC = () => {
   const [formValues, setFormValues] = useState({
     name: "",
     email: "",
     message: "",
   });
-  const [formErrors, setFormErrors] = useState({});
+  const [formErrors, setFormErrors] = useState<TypeFormErrors>({});
   const [isSubmit, setIsSubmit] = useState(false);
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormValues({
       ...formValues,
       [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmit(true);
     setFormErrors(validateForm(formValues));
@@ -52,11 +56,20 @@ const Contact = () => {
       message: formValues.message,
     };
 
-    emailjs.send("service_cvczpy9", "template_oz9sonn", params);
+    emailjs
+      .send("service_cvczpy9", "template_oz9sonn", params, "OoLRYiDIzL9b-axxW")
+      .then(
+        function (response) {
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        function (error) {
+          console.log("FAILED...", error);
+        }
+      );
   };
 
-  const validateForm = (values) => {
-    const errors = {};
+  const validateForm = (values: TypeFormValues) => {
+    const errors = {} as any;
     const nameRgx = /^[A-Za-z\s]*$/;
     const emailRgx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 

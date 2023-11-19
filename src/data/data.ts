@@ -1,4 +1,5 @@
 import { nanoid } from "nanoid";
+import { TypeProjectItem, TypeSkillDataItem } from "../types";
 
 //project imgs
 import pizzaPalaceImg from "../assets/img/pizza-palace.png";
@@ -19,7 +20,7 @@ import sunnysideAgencyLandingPageImg from "../assets/img/sunnyside-agency-landin
 import singlePageDesignPortfolioImg from "../assets/img/single-page-design-portfolio.webp";
 import artGalleryWebsiteImg from "../assets/img/art-gallery-website.webp";
 
-export const skillsData = [
+export const skillsData: TypeSkillDataItem[] = [
   {
     id: nanoid(),
     title: "HTML",
@@ -70,7 +71,7 @@ export const skillsData = [
   },
 ];
 
-export const projectsData = [
+export const projectsData: TypeProjectItem[] = [
   {
     id: nanoid(),
     img: pizzaPalaceImg,

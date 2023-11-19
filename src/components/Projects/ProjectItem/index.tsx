@@ -1,10 +1,18 @@
 import React from "react";
-import CtaButton from "../../../ui/CtaButton/CtaButton";
+import CtaButton from "../../../ui/CtaButton";
 
 //styles
 import "./ProjectItem.scss";
 
-const ProjectItem = (props) => {
+type ProjectItemProps = {
+  img: string;
+  name: string;
+  techList: string[];
+  liveLink: string;
+  gitRepo: string;
+};
+
+const ProjectItem: React.FC<ProjectItemProps> = (props) => {
   const { img, name, techList, liveLink, gitRepo } = props;
 
   return (
