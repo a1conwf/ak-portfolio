@@ -4,7 +4,7 @@ import { IProjectItem } from "../types";
 export const projectsData: IProjectItem[] = [
   {
     id: nanoid(),
-    img: "/src/assets/img/pizza-palace.png",
+    img: "/assets/img/pizza-palace.png",
     name: "Pizza Palace",
     techList: [
       "React",
@@ -20,7 +20,7 @@ export const projectsData: IProjectItem[] = [
   },
   {
     id: nanoid(),
-    img: "/src/assets/img/todo-app.webp",
+    img: "/assets/img/todo-app.webp",
     name: "Todo app",
     techList: ["React", "css modules"],
     liveLink: "https://todo-app-a1conwf.vercel.app/",
@@ -28,7 +28,7 @@ export const projectsData: IProjectItem[] = [
   },
   {
     id: nanoid(),
-    img: "/src/assets/img/password-generator-app.webp",
+    img: "/assets/img/password-generator-app.webp",
     name: "Password Generator App",
     techList: ["React", "css modules"],
     liveLink: "https://password-generator-app-a1conwf.vercel.app/",
@@ -36,7 +36,7 @@ export const projectsData: IProjectItem[] = [
   },
   {
     id: nanoid(),
-    img: "/src/assets/img/gpu-shop.png",
+    img: "/assets/img/gpu-shop.png",
     name: "GPU Online Shop",
     techList: ["React", "React Router", "React Skeleton", "Axios", "Scss"],
     liveLink: "https://gpu-shop.vercel.app/",
@@ -44,7 +44,7 @@ export const projectsData: IProjectItem[] = [
   },
   {
     id: nanoid(),
-    img: "/src/assets/img/tip-calculator-app.webp",
+    img: "/assets/img/tip-calculator-app.webp",
     name: "Tip calculator app",
     techList: ["React", "Scss"],
     liveLink: "https://tip-calculator-app-a1conwf.vercel.app/",
@@ -52,7 +52,7 @@ export const projectsData: IProjectItem[] = [
   },
   {
     id: nanoid(),
-    img: "/src/assets/img/interactive-pricing-component.webp",
+    img: "/assets/img/interactive-pricing-component.webp",
     name: "Interactive pricing component",
     techList: ["React", "Scss"],
     liveLink: "https://interactive-pricing-component-a1conwf.vercel.app/",
@@ -60,7 +60,7 @@ export const projectsData: IProjectItem[] = [
   },
   {
     id: nanoid(),
-    img: "/src/assets/img/pricing-component-with-toggle.webp",
+    img: "/assets/img/pricing-component-with-toggle.webp",
     name: "Pricing component with toggle",
     techList: ["React", "Scss"],
     liveLink: "https://pricing-component-with-toggle-a1conwf.vercel.app/",
@@ -68,7 +68,7 @@ export const projectsData: IProjectItem[] = [
   },
   {
     id: nanoid(),
-    img: "/src/assets/img/fylo-dark-theme-landing-page.webp",
+    img: "/assets/img/fylo-dark-theme-landing-page.webp",
     name: "Fylo dark theme landing page",
     techList: ["React", "Scss"],
     liveLink: "https://fylo-dark-theme-landing-page-a1conwf.vercel.app/",
@@ -76,7 +76,7 @@ export const projectsData: IProjectItem[] = [
   },
   {
     id: nanoid(),
-    img: "/src/assets/img/insure-landing-page.webp",
+    img: "/assets/img/insure-landing-page.webp",
     name: "Insure landing page",
     techList: ["React", "Scss"],
     liveLink: "https://insure-landing-page-a1conwf.vercel.app/",
@@ -84,7 +84,7 @@ export const projectsData: IProjectItem[] = [
   },
   {
     id: nanoid(),
-    img: "/src/assets/img/maker-pre-launch-landing-page.webp",
+    img: "/assets/img/maker-pre-launch-landing-page.webp",
     name: "Maker pre-launch landing page",
     techList: ["React", "Scss"],
     liveLink: "https://maker-pre-launch-landing-page-a1conwf.vercel.app/",
@@ -92,7 +92,7 @@ export const projectsData: IProjectItem[] = [
   },
   {
     id: nanoid(),
-    img: "/src/assets/img/project-tracking-intro-component.webp",
+    img: "/assets/img/project-tracking-intro-component.webp",
     name: "Project tracking intro component",
     techList: ["React", "Scss"],
     liveLink: "https://project-tracking-intro-component-ten.vercel.app/",
@@ -100,7 +100,7 @@ export const projectsData: IProjectItem[] = [
   },
   {
     id: nanoid(),
-    img: "/src/assets/img/news-homepage.webp",
+    img: "/assets/img/news-homepage.webp",
     name: "News homepage",
     techList: ["React", "Scss"],
     liveLink: "https://news-homepage-a1conwf.vercel.app/",
@@ -108,7 +108,7 @@ export const projectsData: IProjectItem[] = [
   },
   {
     id: nanoid(),
-    img: "/src/assets/img/advice-generator-app.webp",
+    img: "/assets/img/advice-generator-app.webp",
     name: "Advice generator app",
     techList: ["React", "Scss", "Api"],
     liveLink: "https://advice-generator-app-a1conwf.vercel.app/",
@@ -116,7 +116,7 @@ export const projectsData: IProjectItem[] = [
   },
   {
     id: nanoid(),
-    img: "/src/assets/img/loopstudios-landing-page.webp",
+    img: "/assets/img/loopstudios-landing-page.webp",
     name: "Loopstudios landing page",
     techList: ["React", "Scss"],
     liveLink: "https://loopstudios-landing-page-a1conwf.vercel.app/",
@@ -124,7 +124,7 @@ export const projectsData: IProjectItem[] = [
   },
   {
     id: nanoid(),
-    img: "/src/assets/img/sunnyside-agency-landing-page.webp",
+    img: "/assets/img/sunnyside-agency-landing-page.webp",
     name: "Sunnyside agency landing page",
     techList: ["React", "Scss"],
     liveLink: "https://sunnyside-agency-landing-page-a1conwf.vercel.app/",
@@ -132,7 +132,7 @@ export const projectsData: IProjectItem[] = [
   },
   {
     id: nanoid(),
-    img: "/src/assets/img/art-gallery-website.webp",
+    img: "/assets/img/art-gallery-website.webp",
     name: "Art gallery website",
     techList: ["React", "Scss"],
     liveLink: "https://art-gallery-website-a1conwf.vercel.app/",
@@ -140,7 +140,7 @@ export const projectsData: IProjectItem[] = [
   },
   {
     id: nanoid(),
-    img: "/src/assets/img/single-page-design-portfolio.webp",
+    img: "/assets/img/single-page-design-portfolio.webp",
     name: "Single-page design portfolio",
     techList: ["Html", "Scss", "Javascript"],
     liveLink: "https://a1conwf.github.io/single-page-design-portfolio/",

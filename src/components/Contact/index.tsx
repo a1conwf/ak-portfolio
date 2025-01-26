@@ -4,7 +4,7 @@ import { IFormErrors, IFormValues } from "../../types";
 
 import "./Contact.scss";
 
-import iconError from "../../assets/svg/icon-error.svg";
+import iconError from "/assets/svg/icon-error.svg";
 
 const Contact: React.FC = () => {
   const [formValues, setFormValues] = useState({
