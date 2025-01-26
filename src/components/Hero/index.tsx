@@ -1,8 +1,8 @@
 import React from "react";
-import CtaButton from "../../ui/CtaButton";
 import { TypeAnimation } from "react-type-animation";
 
-//styles
+import CtaButton from "../../ui/CtaButton";
+
 import "./Hero.scss";
 
 const Hero: React.FC = () => {

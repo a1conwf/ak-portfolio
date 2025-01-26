@@ -4,123 +4,123 @@
 
 //each project
 .project {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-	//project img container
-	&__img {
-		margin-bottom: 20px;
+  //project img container
+  &__img {
+    margin-bottom: 20px;
 
-		img {
-			width: 100%;
-		}
-	}
+    img {
+      width: 100%;
+    }
+  }
 
-	//project title
-	&__title {
-		font-size: rem(24);
-		line-height: rem(32);
-		font-weight: 700;
-		text-transform: uppercase;
-		margin-bottom: 7px;
-	}
+  //project title
+  &__title {
+    font-size: rem(24);
+    line-height: rem(32);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+  }
 
-	//project tech list
-	&__tech-list {
-		display: flex;
-		flex-wrap: wrap;
-		column-gap: 20px;
-		margin-bottom: 20px;
+  //project tech list
+  &__tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    margin-bottom: 20px;
 
-		//project tech list item
-		&-item {
-			color: $grey;
-			text-transform: uppercase;
-		}
-	}
+    //project tech list item
+    &-item {
+      color: $grey;
+      text-transform: uppercase;
+    }
+  }
 
-	//project cta mob
-	&__cta-mob {
-		display: flex;
-		gap: 30px;
-		margin-top: auto;
-	}
+  //project cta mob
+  &__cta-mob {
+    display: flex;
+    gap: 30px;
+    margin-top: auto;
+  }
 
-	//project cta desk
-	&__cta-desk {
-		opacity: 0;
-	}
+  //project cta desk
+  &__cta-desk {
+    opacity: 0;
+  }
 }
 
 @include lg {
-	//each project
-	.project {
-		position: relative;
-		opacity: 1;
+  //each project
+  .project {
+    position: relative;
+    opacity: 1;
 
-		//project img container
-		&__img {
-			position: relative;
+    //project img container
+    &__img {
+      position: relative;
 
-			//img
-			img {
-				height: 100%;
-			}
+      //img
+      img {
+        height: 100%;
+      }
 
-			//overlay
-			&-overlay {
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				left: 0;
-				right: 0;
-				width: 100%;
-				height: 100%;
-				background-color: #000;
-				opacity: 0;
-				transition: opacity 0.3s ease;
-			}
+      //overlay
+      &-overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
 
-			//when hovering on img container, make overlay visible
-			&:hover &-overlay {
-				opacity: 0.75;
-				cursor: pointer;
-			}
+      //when hovering on img container, make overlay visible
+      &:hover &-overlay {
+        opacity: 0.75;
+        cursor: pointer;
+      }
 
-			//when hovering on img container
-			&:hover .project__cta-desk {
-				top: 50%;
-				left: 50%;
-				opacity: 1;
-			}
-		}
+      //when hovering on img container
+      &:hover .project__cta-desk {
+        top: 50%;
+        left: 50%;
+        opacity: 1;
+      }
+    }
 
-		//project tech list
-		&__tech-list {
-			margin-bottom: 0;
-		}
+    //project tech list
+    &__tech-list {
+      margin-bottom: 0;
+    }
 
-		//project cta mob
-		&__cta-mob {
-			display: none;
-		}
+    //project cta mob
+    &__cta-mob {
+      display: none;
+    }
 
-		//project cta desk
-		&__cta-desk {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			display: flex;
-			gap: 50px;
-			flex-direction: column;
-			text-align: center;
-			opacity: 0;
-			transform: translate(-50%, -50%);
-			transition: all 0.3s ease-in-out 0s;
-		}
-	}
+    //project cta desk
+    &__cta-desk {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: flex;
+      gap: 50px;
+      flex-direction: column;
+      text-align: center;
+      opacity: 0;
+      transform: translate(-50%, -50%);
+      transition: all 0.3s ease-in-out 0s;
+    }
+  }
 
-	.fadeIn-bottom {
-		top: 80%;
-	}
+  .fadeIn-bottom {
+    top: 80%;
+  }
 }

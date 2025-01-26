@@ -1,9 +1,7 @@
 import React from "react";
 
-//data
-import { skillsData } from "../../data/data";
+import { skillsData } from "../../constants";
 
-//styles
 import "./Skills.scss";
 
 const Skills: React.FC = () => {

@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
-import { TypeFormErrors, TypeFormValues } from "../../types";
+import { IFormErrors, IFormValues } from "../../types";
 
-//styles
 import "./Contact.scss";
 
-//error icon
 import iconError from "../../assets/svg/icon-error.svg";
 
 const Contact: React.FC = () => {
@@ -14,7 +12,7 @@ const Contact: React.FC = () => {
     email: "",
     message: "",
   });
-  const [formErrors, setFormErrors] = useState<TypeFormErrors>({});
+  const [formErrors, setFormErrors] = useState<IFormErrors>({});
   const [isSubmit, setIsSubmit] = useState(false);
 
   const handleChange = (
@@ -68,7 +66,7 @@ const Contact: React.FC = () => {
       );
   };
 
-  const validateForm = (values: TypeFormValues) => {
+  const validateForm = (values: IFormValues) => {
     const errors = {} as any;
     const nameRgx = /^[A-Za-z\s]*$/;
     const emailRgx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;

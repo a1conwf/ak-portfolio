@@ -1,11 +1,10 @@
 import React, { useState } from "react";
+
 import CtaButton from "../../ui/CtaButton";
 import ProjectItem from "./ProjectItem";
 
-//data
-import { projectsData } from "../../data/data";
+import { projectsData } from "../../constants";
 
-//styles
 import "./Projects.scss";
 
 const Projects: React.FC = () => {
