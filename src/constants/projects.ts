@@ -5,7 +5,7 @@ export const projectsData: IProjectItem[] = [
   {
     id: nanoid(),
     img: "/assets/img/next-pizza.png",
-    name: "Next pizza",
+    name: "Next pizza(in progress)",
     techList: [
       "Next.js",
       "typescript",
