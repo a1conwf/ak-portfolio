@@ -1,75 +1,76 @@
-@import "../../scss/functions";
-@import "../../scss/layout";
-@import "../../scss/variables";
+@use "../../scss/functions" as *;
+@use "../../scss/layout" as *;
+@use "../../scss/variables" as *;
+@use "../../scss/mixins" as *;
 
 //skills
 .skills {
-	margin-bottom: 80px;
-	text-align: center;
-	overflow: hidden;
+  margin-bottom: 80px;
+  text-align: center;
+  overflow: hidden;
 
-	//skills list
-	&__list {
-		display: grid;
-		position: relative;
-		grid-gap: 24px;
-		padding: 40px 0;
-		border-top: 1px solid $white;
-		border-bottom: 1px solid $white;
+  //skills list
+  &__list {
+    display: grid;
+    position: relative;
+    grid-gap: 24px;
+    padding: 40px 0;
+    border-top: 1px solid $white;
+    border-bottom: 1px solid $white;
 
-		//skills list item
-		&-item {
-			display: flex;
-			flex-direction: column;
+    //skills list item
+    &-item {
+      display: flex;
+      flex-direction: column;
 
-			//title
-			&-title {
-				font-size: rem(32);
-				line-height: rem(40);
-				font-weight: 700;
-				letter-spacing: -1px;
-			}
-		}
-	}
+      //title
+      &-title {
+        font-size: rem(32);
+        line-height: rem(40);
+        font-weight: 700;
+        letter-spacing: -1px;
+      }
+    }
+  }
 }
 
 @include md {
-	//skills
-	.skills {
-		margin-bottom: 100px;
-		text-align: left;
+  //skills
+  .skills {
+    margin-bottom: 100px;
+    text-align: left;
 
-		//skills list
-		&__list {
-			grid-template-columns: repeat(2, 1fr);
-			grid-gap: 52px 7px;
-			padding: 52px 0 0;
-			border-top: 1px solid $white;
-			border-bottom: none;
+    //skills list
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 52px 7px;
+      padding: 52px 0 0;
+      border-top: 1px solid $white;
+      border-bottom: none;
 
-			//skills list item
-			&-item {
-				//title
-				&-title {
-					font-size: rem(48);
-					line-height: rem(56);
-					letter-spacing: -1.5px;
-				}
-			}
-		}
-	}
+      //skills list item
+      &-item {
+        //title
+        &-title {
+          font-size: rem(48);
+          line-height: rem(56);
+          letter-spacing: -1.5px;
+        }
+      }
+    }
+  }
 }
 
 @include lg {
-	//skills
-	.skills {
-		margin-bottom: 140px;
+  //skills
+  .skills {
+    margin-bottom: 140px;
 
-		//skills list
-		&__list {
-			grid-template-columns: repeat(3, 1fr);
-			grid-gap: 60px 30px;
-			padding: 72px 0 0;
-		}
-	}
+    //skills list
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 60px 30px;
+      padding: 72px 0 0;
+    }
+  }
 }

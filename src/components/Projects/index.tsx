@@ -8,7 +8,7 @@ import { projectsData } from "../../constants";
 import "./Projects.scss";
 
 const Projects: React.FC = () => {
-  const [visibleProjects, setVisibleProjects] = useState(3);
+  const [visibleProjects, setVisibleProjects] = useState(6);
 
   return (
     <section className="projects" id="projects" data-aos="fade-up">

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import "./Header.scss";
 
@@ -7,6 +7,15 @@ import { AiOutlineClose } from "react-icons/ai";
 
 const Header: React.FC = () => {
   const [isExpanded, setIsExpanded] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsExpanded(false);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <header className="header" data-aos="fade-in" data-aos-delay="400">

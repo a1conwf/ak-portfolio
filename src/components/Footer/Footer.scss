@@ -1,70 +1,71 @@
-@import "../../scss/functions.scss";
-@import "../../scss/variables.scss";
-@import "../../scss/layout.scss";
+@use "../../scss/functions" as *;
+@use "../../scss/variables" as *;
+@use "../../scss/layout" as *;
+@use "../../scss/mixins" as *;
 
 //footer
 .footer {
-	background-color: $darkGrey;
+  background-color: $darkGrey;
 
-	//footer nav
-	&__nav {
-		padding: 40px 0 60px;
-		@include flex(center, center);
-		gap: 20px;
-		flex-direction: column;
-		border-top: 1px solid $white;
+  //footer nav
+  &__nav {
+    padding: 40px 0 60px;
+    @include flex(center, center);
+    gap: 20px;
+    flex-direction: column;
+    border-top: 1px solid $white;
 
-		//name
-		&-name {
-			font-size: rem(24);
-			font-weight: 700;
-			line-height: rem(32);
-			letter-spacing: -0.33px;
-			color: $white;
-		}
+    //name
+    &-name {
+      font-size: rem(24);
+      font-weight: 700;
+      line-height: rem(32);
+      letter-spacing: -0.33px;
+      color: $white;
+    }
 
-		//list
-		&-list {
-			display: flex;
-			gap: 25px;
+    //list
+    &-list {
+      display: flex;
+      gap: 25px;
 
-			li a svg:hover path {
-				fill: $green;
-			}
-		}
-	}
+      li a svg:hover path {
+        fill: $green;
+      }
+    }
+  }
 }
 
 @include md {
-	//footer
-	.footer {
-		//footer nav
-		&__nav {
-			padding: 60px 0 60px;
-			@include flex(space-between, center);
-			gap: 0;
-			flex-direction: row;
+  //footer
+  .footer {
+    //footer nav
+    &__nav {
+      padding: 60px 0 60px;
+      @include flex(space-between, center);
+      gap: 0;
+      flex-direction: row;
 
-			//name
-			&-name {
-				font-size: rem(32);
-				letter-spacing: -0.44px;
-			}
+      //name
+      &-name {
+        font-size: rem(32);
+        letter-spacing: -0.44px;
+      }
 
-			//list
-			&-list {
-				gap: 32px;
-			}
-		}
-	}
+      //list
+      &-list {
+        gap: 32px;
+      }
+    }
+  }
 }
 
 @include lg {
-	//footer
-	.footer {
-		//footer nav
-		&__nav {
-			padding: 50px 0 90px;
-		}
-	}
+  //footer
+  .footer {
+    //footer nav
+    &__nav {
+      padding: 50px 0 90px;
+    }
+  }
 }

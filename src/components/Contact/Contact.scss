@@ -1,6 +1,7 @@
-@import "../../scss/functions";
-@import "../../scss/variables";
-@import "../../scss/layout";
+@use "../../scss/functions" as *;
+@use "../../scss/variables" as *;
+@use "../../scss/layout" as *;
+@use "../../scss/mixins" as *;
 
 //contact
 .contact {

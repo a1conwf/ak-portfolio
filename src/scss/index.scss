@@ -1,5 +1,7 @@
-@import "./typography";
-@import "./mixins";
+@use "./typography" as *;
+@use "./mixins" as *;
+@use "./functions" as *;
+@use "./variables" as *;
 
 * {
   margin: 0;
