@@ -5,6 +5,7 @@ import { IFormErrors, IFormValues } from "../../types";
 import "./Contact.scss";
 
 import iconError from "/assets/svg/icon-error.svg";
+import toast from "react-hot-toast";
 
 const Contact: React.FC = () => {
   const [formValues, setFormValues] = useState({
@@ -48,6 +49,17 @@ const Contact: React.FC = () => {
   };
 
   const sendEmail = () => {
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      console.error(
+        "EmailJS configuration error: Missing environment variables. Please check your .env file."
+      );
+      return;
+    }
+
     const params = {
       name: formValues.name,
       email: formValues.email,
@@ -55,15 +67,17 @@ const Contact: React.FC = () => {
     };
 
     emailjs
-      .send("service_cvczpy9", "template_oz9sonn", params, "OoLRYiDIzL9b-axxW")
-      .then(
-        function (response) {
-          console.log("SUCCESS!", response.status, response.text);
-        },
-        function (error) {
-          console.log("FAILED...", error);
-        }
-      );
+      .send(serviceId, templateId, params, publicKey)
+      .then((response) => {
+        console.log("SUCCESS!", response.status, response.text);
+        toast.success("Email sent successfully!");
+      })
+      .catch((error) => {
+        console.log("FAILED...", error);
+        toast.error(
+          "Something went wrong while sending an email, please try again later!"
+        );
+      });
   };
 
   const validateForm = (values: IFormValues) => {

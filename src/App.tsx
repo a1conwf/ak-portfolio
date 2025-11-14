@@ -14,6 +14,7 @@ import Footer from "./components/Footer";
 
 //styles
 import "./scss/index.scss";
+import { Toaster } from "react-hot-toast";
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -22,6 +23,7 @@ const App: React.FC = () => {
 
   return (
     <>
+      <Toaster />
       <Header />
       <main>
         <Hero />
