@@ -16,8 +16,8 @@ export const projectsData: IProjectItem[] = [
       "zod",
       "zustand",
     ],
-    liveLink: "https://todo-app-beta-red-44.vercel.app/",
-    gitRepo: "https://github.com/a1conwf/todo-app",
+    liveLink: "https://next-pizza-dusky-ten.vercel.app/",
+    gitRepo: "https://github.com/a1conwf/next-pizza",
   },
   {
     id: nanoid(),
