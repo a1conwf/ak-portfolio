@@ -1,15 +1,3 @@
-export interface IFormValues {
-  name: string;
-  email: string;
-  message: string;
-}
-
-export interface IFormErrors {
-  name?: string;
-  email?: string;
-  message?: string;
-}
-
 export interface IProjectItem {
   id?: string;
   img: string;

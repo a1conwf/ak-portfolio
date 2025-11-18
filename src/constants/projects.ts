@@ -55,7 +55,7 @@ export const projectsData: IProjectItem[] = [
     id: nanoid(),
     img: "/assets/img/portfolio-website.webp",
     name: "Portfolio Website",
-    techList: ["React", "Typescript", "Scss modules"],
+    techList: ["React", "Typescript", "Scss modules", "React hook form", "Zod"],
     liveLink: "https://antonkashuba.dev/",
     gitRepo: "https://github.com/a1conwf/ak-portfolio",
   },

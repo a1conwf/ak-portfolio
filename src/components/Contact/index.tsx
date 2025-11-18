@@ -1,54 +1,33 @@
-import React, { useState } from "react";
+import React from "react";
 import emailjs from "@emailjs/browser";
-import { IFormErrors, IFormValues } from "../../types";
+import toast from "react-hot-toast";
+
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { emailSchema, emailSchemaValues } from "../../schemas";
 
 import "./Contact.scss";
 
 import iconError from "/assets/svg/icon-error.svg";
-import toast from "react-hot-toast";
+
+const defaultFormValues = {
+  name: "",
+  email: "",
+  message: "",
+};
 
 const Contact: React.FC = () => {
-  const [formValues, setFormValues] = useState({
-    name: "",
-    email: "",
-    message: "",
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<emailSchemaValues>({
+    resolver: zodResolver(emailSchema),
+    defaultValues: defaultFormValues,
   });
-  const [formErrors, setFormErrors] = useState<IFormErrors>({});
-  const [isSubmit, setIsSubmit] = useState(false);
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormValues({
-      ...formValues,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmit(true);
-    setFormErrors(validateForm(formValues));
-
-    if (
-      !validateForm(formValues).hasOwnProperty("name") &&
-      !validateForm(formValues).hasOwnProperty("email") &&
-      !validateForm(formValues).hasOwnProperty("message")
-    ) {
-      sendEmail();
-      resetForm();
-    }
-  };
-
-  const resetForm = () => {
-    setFormValues({
-      name: "",
-      email: "",
-      message: "",
-    });
-  };
-
-  const sendEmail = () => {
+  const sendEmail = (data: emailSchemaValues) => {
     const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
@@ -61,9 +40,9 @@ const Contact: React.FC = () => {
     }
 
     const params = {
-      name: formValues.name,
-      email: formValues.email,
-      message: formValues.message,
+      name: data.name,
+      email: data.email,
+      message: data.message,
     };
 
     emailjs
@@ -80,28 +59,9 @@ const Contact: React.FC = () => {
       });
   };
 
-  const validateForm = (values: IFormValues) => {
-    const errors = {} as any;
-    const nameRgx = /^[A-Za-z\s]*$/;
-    const emailRgx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-
-    if (!values.name) {
-      errors.name = "Can't be empty";
-    } else if (!nameRgx.test(values.name)) {
-      errors.name = "Sorry, only letters are allowed";
-    }
-
-    if (!values.email) {
-      errors.email = "Can't be empty";
-    } else if (!emailRgx.test(values.email)) {
-      errors.email = "Sorry, invalid format here";
-    }
-
-    if (!values.message) {
-      errors.message = "Can't be empty";
-    }
-
-    return errors;
+  const onSubmit = (data: emailSchemaValues) => {
+    sendEmail(data);
+    reset(defaultFormValues);
   };
 
   return (
@@ -116,73 +76,55 @@ const Contact: React.FC = () => {
             </p>
           </div>
 
-          <form className="form" onSubmit={handleSubmit} autoComplete="off">
-            <div
-              className={
-                formErrors.name && isSubmit
-                  ? "form__group error"
-                  : "form__group"
-              }
-            >
+          <form
+            className="form"
+            onSubmit={handleSubmit(onSubmit)}
+            autoComplete="off"
+          >
+            <div className={`form__group ${errors.name && "error"}`}>
               <input
                 className="form__group-input"
                 type="text"
-                name="name"
-                value={formValues.name}
                 placeholder="Name"
-                onChange={handleChange}
+                {...register("name")}
               />
               <img
                 src={iconError}
                 alt="icon-error"
                 className="form__group-icon"
               />
-              <span className="form__group-error">{formErrors.name}</span>
+              <span className="form__group-error">{errors.name?.message}</span>
             </div>
 
-            <div
-              className={
-                formErrors.email && isSubmit
-                  ? "form__group error"
-                  : "form__group"
-              }
-            >
+            <div className={`form__group ${errors.email && "error"}`}>
               <input
                 className="form__group-input"
                 type="text"
-                name="email"
-                value={formValues.email}
+                {...register("email")}
                 placeholder="Email"
-                onChange={handleChange}
               />
               <img
                 src={iconError}
                 alt="icon-error"
                 className="form__group-icon"
               />
-              <span className="form__group-error">{formErrors.email}</span>
+              <span className="form__group-error">{errors.email?.message}</span>
             </div>
 
-            <div
-              className={
-                formErrors.message && isSubmit
-                  ? "form__group error"
-                  : "form__group"
-              }
-            >
+            <div className={`form__group ${errors.message && "error"}`}>
               <textarea
                 placeholder="Message"
-                name="message"
-                value={formValues.message}
+                {...register("message")}
                 className="form__group-textarea"
-                onChange={handleChange}
               />
               <img
                 src={iconError}
                 alt="icon-error"
                 className="form__group-icon"
               />
-              <span className="form__group-error">{formErrors.message}</span>
+              <span className="form__group-error">
+                {errors.message?.message}
+              </span>
             </div>
 
             <button className="btn">Send message</button>
