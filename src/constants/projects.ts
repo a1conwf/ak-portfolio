@@ -21,6 +21,23 @@ export const projectsData: IProjectItem[] = [
   },
   {
     id: nanoid(),
+    img: "/assets/img/dictionary-web-app.webp",
+    name: "Dictionary web app",
+    techList: [
+      "React",
+      "typescript",
+      "context api",
+      "tailwind",
+      "shadcn",
+      "zod",
+      "tanstack query",
+      "axios",
+    ],
+    liveLink: "https://dictionary-web-app-theta-lac.vercel.app/",
+    gitRepo: "https://github.com/a1conwf/dictionary-web-app",
+  },
+  {
+    id: nanoid(),
     img: "/assets/img/todo-app.webp",
     name: "Todo app",
     techList: ["React", "typescript", "tailwind"],
