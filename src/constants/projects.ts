@@ -21,6 +21,23 @@ export const projectsData: IProjectItem[] = [
   },
   {
     id: nanoid(),
+    img: "/assets/img/weather-app.webp",
+    name: "Weather app",
+    techList: [
+      "React",
+      "typescript",
+      "tailwind",
+      "zustand",
+      "react hook form",
+      "zod",
+      "tanstack query",
+      "axios",
+    ],
+    liveLink: "https://weather-app-navy-sigma-15.vercel.app/",
+    gitRepo: "https://github.com/a1conwf/weather-app",
+  },
+  {
+    id: nanoid(),
     img: "/assets/img/dictionary-web-app.webp",
     name: "Dictionary web app",
     techList: [
