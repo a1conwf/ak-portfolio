@@ -44,10 +44,10 @@ export const skillsData: ISkillItem[] = [
 	},
 	{
 		id: nanoid(),
-		title: "Git",
+		title: "Sanity CMS",
 	},
 	{
 		id: nanoid(),
-		title: "Jira",
+		title: "Git",
 	},
 ];

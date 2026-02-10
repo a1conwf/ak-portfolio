@@ -55,22 +55,6 @@ export const projectsData: IProjectItem[] = [
 	},
 	{
 		id: nanoid(),
-		img: "/assets/img/todo-app.webp",
-		name: "Todo app",
-		techList: ["React", "typescript", "tailwind"],
-		liveLink: "https://todo-app-beta-red-44.vercel.app/",
-		gitRepo: "https://github.com/a1conwf/todo-app",
-	},
-	{
-		id: nanoid(),
-		img: "/assets/img/password-generator-app.webp",
-		name: "Password Generator App",
-		techList: ["React", "typescript", "scss modules"],
-		liveLink: "https://password-generator-app-six-alpha.vercel.app/",
-		gitRepo: "https://github.com/a1conwf/password-generator-app",
-	},
-	{
-		id: nanoid(),
 		img: "/assets/img/pizza-palace.png",
 		name: "Pizza Palace",
 		techList: [
@@ -84,6 +68,14 @@ export const projectsData: IProjectItem[] = [
 		],
 		liveLink: "https://pizza-palace-lilac.vercel.app/",
 		gitRepo: "https://github.com/a1conwf/pizza-palace",
+	},
+	{
+		id: nanoid(),
+		img: "/assets/img/personal-blog.jpg",
+		name: "Personal blog",
+		techList: ["Astro", "Html", "Tailwind", "Typescript", "Sanity cms"],
+		liveLink: "https://personal-blog-astro-app-1hdw.vercel.app/",
+		gitRepo: "https://github.com/a1conwf/personal-blog",
 	},
 	{
 		id: nanoid(),
@@ -105,7 +97,7 @@ export const projectsData: IProjectItem[] = [
 		id: nanoid(),
 		img: "/assets/img/portfolio-website.webp",
 		name: "Portfolio Website",
-		techList: ["React", "Typescript", "Scss modules", "React hook form", "Zod"],
+		techList: ["React", "Typescript", "Scss modules", "React hook form", "Zod", "Vite"],
 		liveLink: "https://antonkashuba.dev/",
 		gitRepo: "https://github.com/a1conwf/ak-portfolio",
 	},
