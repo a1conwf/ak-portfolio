@@ -59,4 +59,12 @@ export const projectsData: IProjectItem[] = [
 		liveLink: "https://manage-landing-page-two-gules.vercel.app/",
 		gitRepo: "https://github.com/a1conwf/manage-landing-page",
 	},
+	{
+		id: nanoid(),
+		img: "/assets/img/portfolio-website.webp",
+		name: "Portfolio Website",
+		techList: ["React", "Typescript", "Scss modules", "React hook form", "Zod"],
+		liveLink: "https://antonkashuba.dev/",
+		gitRepo: "https://github.com/a1conwf/ak-portfolio",
+	},
 ];
