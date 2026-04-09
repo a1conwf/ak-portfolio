@@ -37,11 +37,11 @@ export const projectsData: IProjectItem[] = [
 	},
 	{
 		id: nanoid(),
-		img: "/assets/img/dictionary-web-app.webp",
-		name: "Dictionary web app",
-		techList: ["React", "typescript", "context api", "tailwind", "shadcn", "zod", "tanstack query"],
-		liveLink: "https://dictionary-web-app-theta-lac.vercel.app/",
-		gitRepo: "https://github.com/a1conwf/dictionary-web-app",
+		img: "/assets/img/payapi-website.webp",
+		name: "Payapi website",
+		techList: ["Next.js", "Typescript", "Tailwind", "React hook form", "Zod"],
+		liveLink: "https://payapi-website-mu.vercel.app/",
+		gitRepo: "https://github.com/a1conwf/payapi-website",
 	},
 	{
 		id: nanoid(),
@@ -58,6 +58,14 @@ export const projectsData: IProjectItem[] = [
 		techList: ["Astro", "Html", "Tailwind", "Javascript"],
 		liveLink: "https://manage-landing-page-two-gules.vercel.app/",
 		gitRepo: "https://github.com/a1conwf/manage-landing-page",
+	},
+	{
+		id: nanoid(),
+		img: "/assets/img/digitalbank-landing-page.webp",
+		name: "Digitalbank Landing Page",
+		techList: ["Html", "Tailwind", "Javascript", "Vite"],
+		liveLink: "https://digitalbank-landing-page-olive.vercel.app/",
+		gitRepo: "https://github.com/a1conwf/digitalbank-landing-page",
 	},
 	{
 		id: nanoid(),

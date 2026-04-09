@@ -18,7 +18,7 @@ const Header: React.FC = () => {
   }, []);
 
   return (
-    <header className="header" data-aos="fade-in" data-aos-delay="400">
+    <header className="header" data-aos="fade-down" data-aos-delay="50">
       <nav className="nav">
         <div className="container">
           <a href="#about" className="nav__name">

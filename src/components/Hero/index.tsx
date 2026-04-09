@@ -10,8 +10,8 @@ const Hero: React.FC = () => {
     <section
       className="hero"
       id="about"
-      data-aos="fade-down"
-      data-aos-delay="800"
+      data-aos="fade-up"
+      data-aos-delay="150"
     >
       <h1 className="hero__title">
         Nice to meet you! <br /> I'm{" "}

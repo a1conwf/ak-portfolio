@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
 
 import CtaButton from "../../ui/CtaButton";
 import ProjectItem from "./ProjectItem";
@@ -10,8 +11,12 @@ import "./Projects.scss";
 const Projects: React.FC = () => {
 	const [visibleProjects, setVisibleProjects] = useState(3);
 
+	useEffect(() => {
+		AOS.refresh();
+	}, [visibleProjects]);
+
 	return (
-		<section className="projects" id="projects" data-aos="fade-up">
+		<section className="projects" id="projects" data-aos="fade-up" data-aos-delay="100">
 			<div className="container">
 				<div className="projects__header">
 					<h2 className="projects__title">Projects</h2>
@@ -19,15 +24,16 @@ const Projects: React.FC = () => {
 				</div>
 
 				<div className="projects__grid">
-					{projectsData?.slice(0, visibleProjects).map((project) => (
-						<ProjectItem
-							key={project.id}
-							img={project.img}
-							name={project.name}
-							techList={project.techList}
-							liveLink={project.liveLink}
-							gitRepo={project.gitRepo}
-						/>
+					{projectsData?.slice(0, visibleProjects).map((project, idx) => (
+						<div key={project.id} data-aos="fade-up" data-aos-delay={100 + (idx % 3) * 80}>
+							<ProjectItem
+								img={project.img}
+								name={project.name}
+								techList={project.techList}
+								liveLink={project.liveLink}
+								gitRepo={project.gitRepo}
+							/>
+						</div>
 					))}
 				</div>
 
