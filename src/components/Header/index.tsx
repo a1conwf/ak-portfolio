@@ -6,62 +6,49 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineClose } from "react-icons/ai";
 
 const Header: React.FC = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
+	const [isExpanded, setIsExpanded] = useState(false);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsExpanded(false);
-    };
+	const isMobile = window.innerWidth < 768;
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+	useEffect(() => {
+		const handleResize = () => {
+			setIsExpanded(false);
+		};
 
-  return (
-    <header className="header" data-aos="fade-down" data-aos-delay="50">
-      <nav className="nav">
-        <div className="container">
-          <a href="#about" className="nav__name">
-            antonkashuba
-          </a>
+		window.addEventListener("resize", handleResize);
+		return () => window.removeEventListener("resize", handleResize);
+	}, []);
 
-          <ul className={!isExpanded ? "nav__list" : "nav__list active"}>
-            <li
-              className="nav__list-item"
-              onClick={() => setIsExpanded(!isExpanded)}
-            >
-              <a href="#about">About</a>
-            </li>
-            <li
-              className="nav__list-item"
-              onClick={() => setIsExpanded(!isExpanded)}
-            >
-              <a href="#skills">Skills</a>
-            </li>
-            <li
-              className="nav__list-item"
-              onClick={() => setIsExpanded(!isExpanded)}
-            >
-              <a href="#projects">Projects</a>
-            </li>
-            <li
-              className="nav__list-item"
-              onClick={() => setIsExpanded(!isExpanded)}
-            >
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
+	return (
+		<header className="header">
+			<nav className="nav">
+				<div className="container">
+					<a href="#about" className="nav__name">
+						antonkashuba
+					</a>
 
-          <div
-            className="nav__hamburger"
-            onClick={() => setIsExpanded(!isExpanded)}
-          >
-            {!isExpanded ? <RxHamburgerMenu /> : <AiOutlineClose />}
-          </div>
-        </div>
-      </nav>
-    </header>
-  );
+					<ul className={!isExpanded ? "nav__list" : "nav__list active"}>
+						<li className="nav__list-item" onClick={() => setIsExpanded(!isExpanded)}>
+							<a href="#about">About</a>
+						</li>
+						<li className="nav__list-item" onClick={() => setIsExpanded(!isExpanded)}>
+							<a href="#skills">Skills</a>
+						</li>
+						<li className="nav__list-item" onClick={() => setIsExpanded(!isExpanded)}>
+							<a href="#projects">Projects</a>
+						</li>
+						<li className="nav__list-item" onClick={() => setIsExpanded(!isExpanded)}>
+							<a href="#contact">Contact</a>
+						</li>
+					</ul>
+
+					<div className="nav__hamburger" onClick={() => setIsExpanded(!isExpanded)}>
+						{!isExpanded ? <RxHamburgerMenu /> : <AiOutlineClose />}
+					</div>
+				</div>
+			</nav>
+		</header>
+	);
 };
 
 export default Header;
