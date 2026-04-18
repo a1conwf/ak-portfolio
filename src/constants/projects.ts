@@ -37,6 +37,14 @@ export const projectsData: IProjectItem[] = [
 	},
 	{
 		id: nanoid(),
+		img: "/assets/img/designo-website.webp",
+		name: "Designo website",
+		techList: ["Next.js", "Typescript", "Tailwind", "React hook form", "Zod"],
+		liveLink: "https://designo-website-two.vercel.app/",
+		gitRepo: "https://github.com/a1conwf/designo-website",
+	},
+	{
+		id: nanoid(),
 		img: "/assets/img/payapi-website.webp",
 		name: "Payapi website",
 		techList: ["Next.js", "Typescript", "Tailwind", "React hook form", "Zod"],
